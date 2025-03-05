@@ -1,0 +1,25 @@
+/* src/pages/MarketPlace.css */
+
+.MarketPlace {
+  /* default styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* medium screen size (e.g. tablet) */
+@media (max-width: 768px) {
+  .MarketPlace {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
+/* small screen size (e.g. mobile) */
+@media (max-width: 480px) {
+  .MarketPlace {
+    flex-direction: column;
+    padding: 5px;
+  }
+}

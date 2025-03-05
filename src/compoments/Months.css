@@ -1,0 +1,158 @@
+.roadMapDivContainerL {
+  position: absolute;
+  transform: translate(-73%, -50%);
+  width: 33.3%;
+  max-width: 600px;
+}
+
+.roadMapDiv1L {
+  border-radius: 20px;
+  background: transparent;
+  padding: 20px;
+}
+
+.roadMapDiv1L::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(to left, #ffd363 10%, #d53a9c00 30%);
+  -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.dashedLineL {
+  width: 22%;
+  border: #ffd363 dashed 1px;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
+.ballL {
+  border-radius: 50px;
+  background-color: #ffd363;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  right: -23%;
+}
+
+.roadMapDivContainerR {
+  position: absolute;
+  transform: translate(73%, -50%);
+  width: 33.3%;
+  max-width: 600px;
+}
+
+.roadMapDiv1R {
+  position: absolute;
+  border-radius: 20px;
+  background: transparent;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.roadMapDiv1R::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(to left, #d53a9c00 70%, #ffd363 90%);
+  -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.dashedLineR {
+  width: 23%;
+  border: #ffd363 dashed 1px;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.ballR {
+  border-radius: 50px;
+  background-color: #ffd363;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -23%;
+}
+.roadMapDiv2 {
+  border: #ffd363 solid 1px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.062);
+}
+
+.middleLine {
+  border-right: #ffd363 solid 1px;
+}
+
+.roadMapDivcontainerMobile {
+  left: 15%;
+}
+.leftLine {
+  border-left: #ffd363 solid 1px;
+}
+.mobileBall {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: #ffd363;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: -15%;
+}
+.dashedLineMobile {
+  border-top: #ffd363 dashed 1px;
+  width: 15%;
+  height: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-100%);
+}
+.roadMapDiv1Mobile {
+  position: absolute;
+  border-radius: 20px;
+  background: transparent;
+  padding: 20px;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.roadMapDiv1Mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(to left, #d53a9c00 70%, #ffd363 90%);
+  -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

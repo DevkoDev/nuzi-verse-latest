@@ -1,0 +1,69 @@
+.toggle-outer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(62 58 58);
+  aspect-ratio: 2;
+  height: 50px;
+}
+
+.toggle-outer.active {
+  background-color: unset;
+  background: linear-gradient(42deg, rgb(211 141 34) 0%, rgb(240 221 142) 100%);
+}
+.toggle-container {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-circle {
+  aspect-ratio: 1;
+  height: 95%;
+  background: linear-gradient(44deg, rgba(74, 74, 73, 1) 0%, rgba(110, 108, 106, 1) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: transform 0.3s ease; */
+  transition: 4s ease left;
+}
+
+.toggle-circle img {
+  width: 70%;
+
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.toggle-inner {
+  position: relative;
+  border-radius: 100px;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  background-color: #484847;
+}
+
+.toggle-container.active {
+  background-image: linear-gradient(232.55deg, rgba(255, 211, 99, 0.83) 20.32%, rgba(241, 160, 18, 0.83) 97.66%);
+
+  justify-content: flex-end;
+}
+
+.switch {
+  transform: translateX(-50%);
+}
+
+.toggle {
+  transform: translateX(-50%);
+  left: 50%;
+}

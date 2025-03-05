@@ -1,0 +1,43 @@
+.square-btn {
+  margin: 20%;
+  position: relative;
+  width: 65%;
+  aspect-ratio: 1/1;
+}
+
+.union-all {
+  position: absolute;
+  width: 100%;
+}
+
+.rect-holder .first {
+  width: 18%;
+  top: 16%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.rect-holder .second {
+  width: 18%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 84%;
+}
+.rect-holder .third {
+  width: 18%;
+  top: 84%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.rect-holder .fourth {
+  width: 18%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 16%;
+}
+.rect-holder span {
+  cursor: pointer;
+}

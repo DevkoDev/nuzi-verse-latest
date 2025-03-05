@@ -1,0 +1,60 @@
+* {
+  --primary-color: #f1a013;
+  --secondary-color: #ec971f;
+  --white-color: rgba(255, 255, 255, 1);
+  --black-color: rgba(30, 30, 30, 1);
+  --tertiary-color: #ac9e9e;
+  --quantico-font: "Quantico", serif;
+  --azart-font: "Azeret Mono", serif;
+  --epilogue-font: "Epilogue", serif;
+  --Poppins-font: "Poppins", serif;
+  --inter-font: "Inter", serif;
+}
+.background {
+  background-image: url(../8fac842e0a101438df6bcb2f69435547.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body {
+  /* / background-image: url(../public/8fac842e0a101438df6bcb2f69435547.png) ; */
+
+  font-family: "Oxanium", sans-serif;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+
+  flex-direction: column;
+}
+
+section {
+  min-height: 60vh;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+}
+canvas {
+  display: block;
+  background: radial-gradient(circle, #1a1c20 10%, #101216 40%, #07080a 80%, #000000 100%);
+}
+/* body {
+  background: radial-gradient(circle, #8895b3 10%, #2d3e50 40%, #0a0f1e 80%, #000000 100%);
+  height: 100vh;
+  margin: 0;
+} */
+
+:root {
+  --toastify-color-progress-dark: #f1a013;
+  --toastify-color-success: #f1a013;
+  --toastify-color-warning: #f1a013;
+  --toastify-color-error: #f1a013;
+}

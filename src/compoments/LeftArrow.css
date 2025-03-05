@@ -1,0 +1,52 @@
+.animation-container2 {
+  position: relative;
+  width: 25%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.image-box2 {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: url("/leftArrow.svg") no-repeat center/contain;
+  animation: sliderMove2 4s infinite linear;
+  opacity: 0;
+}
+
+.image-box2:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.image-box2:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.image-box2:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.image-box2:nth-child(4) {
+  animation-delay: 3s;
+}
+
+@keyframes sliderMove2 {
+  0% {
+    transform: translateX(170%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(160%);
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+}

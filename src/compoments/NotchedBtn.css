@@ -1,0 +1,45 @@
+.notchedButtonL1 {
+  /* clip-path: polygon(50% 0%, 107% -3%, 103% 58%, 86% 114%, -2% 106%, -1% 38%, 14% -12%); */
+  clip-path: polygon(50% 0%, 112% -3%, 103% 59%, 84% 113%, -2% 106%, -2% 38%, 14% -7%);
+  /* background-color: rgba(255, 211, 99, 1); 
+ */ /* */
+  cursor: pointer;
+  text-decoration: none;
+  color: unset;
+  display: block;
+}
+
+.notchedButtonL2 {
+  width: fit-content;
+  overflow: hidden;
+  background-color: rgba(255, 211, 99, 1);
+  padding: 4px;
+  clip-path: polygon(50% 0%, 107% -3%, 103% 58%, 86% 114%, -2% 106%, -1% 38%, 14% -12%);
+  -webkit-transition: 0.5s;
+  transition: 0.3s;
+  color: rgb(206, 202, 202);
+  /*/*/
+}
+
+.notchedButtonL2:hover{
+  color: white;
+}
+.notchedButtonL3 {
+  /* clip-path: polygon(50% 0%, 107% -3%, 103% 58%, 86% 114%, -2% 106%, -1% 38%, 14% -12%); */
+  clip-path: polygon(50% 0%, 103% -8%, 103.5% 58%, 86% 111%, -2% 111%, -1% 36%, 14% -10%);
+  background-color: #00021d;
+  padding: 3px 3px;
+}
+.notchedButtonL4 {
+  padding: 0 10px;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  clip-path: polygon(50% 0%, 107% -3%, 103% 58%, 86% 114%, -2% 106%, -1% 38%, 14% -12%);
+  /* border: 2px solid rgb(13, 3, 49);
+             padding: 7px 15px;
+*/
+}

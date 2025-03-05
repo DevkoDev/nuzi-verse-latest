@@ -1,0 +1,158 @@
+
+.holder-all {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  background-color: #fdfdff09;
+  top: 0%;
+}
+.l-top {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+.r-top {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.r-bottom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.l-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  justify-content: space-around;
+}
+.top .line-market {
+  border: 2px solid rgba(255, 219, 90, 0.3);
+  padding: 10px;
+  align-self: self-end;
+  position: absolute;
+  top: -4%;
+  left: 10%;
+  background-color: rgba(54, 54, 54, 0.24);
+}
+.line-market {
+  font-family: var(--quantico-font);
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  left: 16%;
+  width: fit-content;
+  background-color: rgba(54, 54, 54, 0.24);
+  border: 2px solid rgba(255, 219, 90, 0.3);
+  padding: 10px;
+  align-self: self-end;
+}
+.c-logo {
+  width: 200px;
+  height: 50px;
+  border: 2px solid rgba(250, 208, 83, 1);
+}
+
+.shape-holder {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  padding: 1px;
+  background-color: rgba(241, 160, 18, 1);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 999999;
+}
+
+.shape-holder2 {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  padding: 1px;
+  background-color: rgba(241, 160, 18, 1);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  z-index: 999999;
+}
+
+.custom-shape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  position: relative;
+  padding: 0 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  text-align: center;
+  height: 60px;
+}
+
+.arrow {
+  width: 0px;
+  height: 20px;
+  background: gold;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.arrow.left {
+  transform: rotate(180deg);
+}
+.arrows {
+  font-size: 30px;
+  color: rgba(218, 190, 33, 0.822);
+}
+
+.arrows i {
+  color: linear-gradient(90deg, #fad053 0%, rgba(250, 208, 83, 0) 82.76%);
+}
+.content {
+}
+.c-notched {
+  position: absolute;
+  top: -4%;
+  right: 16%;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.bottom {
+  bottom: 20%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 5%;
+  right: 67%;
+}
+
+.buttonText{
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+
+.circlesMainBox{
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+}
+
+.squaresBox{
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+}

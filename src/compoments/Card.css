@@ -1,0 +1,116 @@
+/*.card{
+    border: 1px solid goldenrod;
+    width: fit-content;
+    clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
+    overflow: hidden;
+}*/
+.card h3 {
+  font-family: var(--azart-font);
+font-size: 24.6px;
+font-weight: 600;
+line-height: 18.26px;
+
+
+}
+.one{
+
+height:350px;
+
+background-color:#ec971f;
+display:flex;
+justify-content: center;
+/* clip-path:polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%); */
+}
+.card {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
+    height:345px;
+   width:245px;
+   border-radius: 4px;
+background-color:#141413;
+
+
+align-self:center;
+clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
+
+  }
+
+  .card-badge {
+  
+    top: 70px;
+    left: 60px;
+    background-color: rgba(241, 160, 18, 1);
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    position: absolute;
+    font-family: var(--epilogue-font);
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+  }
+  .iconimg{
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(241, 160, 18, 1);
+    border-radius: 50%;
+  }
+  .card-image {
+    padding: 15px;
+    width: 245px;
+    height: 219px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .card-title {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-price,
+  .card-amount {
+    margin: 5px 0;
+    font-size: 10px;
+  }
+  .card-amount{
+    color: rgba(241, 160, 18, 1);
+  }
+  .card-button {
+    margin-top: 10px;
+    background-color: rgba(241, 160, 18, 1);
+    border: none;
+font-weight:500 ;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 5px 25px;
+    font-family: var(--inter-font);
+    font-size: 13px;
+  }
+  .fire{
+    margin: 0 5px ;
+  }
+  .card-button:hover {
+    background-color: #ec971f;
+  }
+  .card-text img{
+width: 35px;
+height:  35px;
+padding: 5px;
+margin-left: 5px;
+  }
+  .card-text{
+    display: flex;
+    gap: 20px;
+    
+  }
