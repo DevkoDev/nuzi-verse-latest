@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
 import "./PageNav.css";
 import NotchedBtn from "./NotchedBtn";
 import NavLine from "./NavLine";
@@ -44,7 +43,7 @@ function PageNav() {
   return (
     <div className="header-wrapper">
       <div className="logo-container d-none d-md-block">
-        <Logo />
+      <Link to="/"><img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" /></Link>
       </div>
       <nav className="navbar py-md-4" style={{ backgroundColor: navBarBGC }}>
         <div className="container-lg d-none d-md-flex">
@@ -74,7 +73,7 @@ function PageNav() {
         </div>
 
         <div className="container-fluid d-flex d-md-none collapseContainer py-3 ">
-          <button className={`btn collapseBtn ${(isOpened)?"opened":""}`} type="button" onClick={toggleCollapse} aria-expanded="false" aria-controls="menu">
+          <button className={`btn collapseBtn ${isOpened ? "opened" : ""}`} type="button" onClick={toggleCollapse} aria-expanded="false" aria-controls="menu">
             <svg width="100%" height="100%" viewBox="0 0 100 100">
               <path className="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
               <path className="line line2" d="M 20,50 H 80" />
@@ -82,9 +81,9 @@ function PageNav() {
             </svg>
           </button>
           <div className="mobileLogo">
-            <a href="/">
+            <Link to="/">
               <img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" />
-            </a>
+            </Link>
           </div>
           <div className="collapse w-100 p-0 m-0" id="menu" ref={collapseRef}>
             <div className="">
