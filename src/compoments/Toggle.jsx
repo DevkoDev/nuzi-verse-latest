@@ -1,23 +1,26 @@
-import { useState } from "react";
+
+import PropTypes from "prop-types";
 import "./Toggle.css";
 
-const ToggleSwitch = () => {
-  const [isActive, setIsActive] = useState(true);
+const ToggleSwitch = ({ onToggle ,isToggled}) => {
 
   const handleToggle = () => {
-    setIsActive(!isActive);
+  
+    if (onToggle) {
+      onToggle(); 
+    }
   };
 
   return (
-    <div className={`toggle-outer p-1 d-none d-md-block rounded-pill ${isActive ? "" : ""}`} style={{filter: "brightness(50%)"}}>
+    <div className={`toggle-outer p-1 d-none d-md-block rounded-pill ${isToggled ? "active" : ""}`}>
       <div
-        className={`toggle-container p-1 rounded-pill ${isActive ? "" : ""}`}
-        // onClick={handleToggle}
+        className={`toggle-container p-1 rounded-pill ${isToggled ? "active" : ""}`}
+        onClick={handleToggle}
       >
         <div className="toggle-circle">
           <div className="toggle-inner">
             <img
-              src={isActive ? "/Group.png" : "/Isolation_Mode.svg"}
+              src={isToggled ? "/Isolation_Mode.svg" : "/toggle.svg"}
               alt="Toggle Icon"
               className="toggle-image"
             />
@@ -26,6 +29,10 @@ const ToggleSwitch = () => {
       </div>
     </div>
   );
+};
+
+ToggleSwitch.propTypes = {
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default ToggleSwitch;

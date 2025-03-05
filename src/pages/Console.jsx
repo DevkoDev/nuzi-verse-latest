@@ -5,8 +5,9 @@ import Toggle from "../compoments/Toggle";
 import LeftArrow from "../compoments/LeftArrow";
 import RightArrow from "../compoments/RightArrow";
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-function Console() {
+function Console({ onToggle }) {
   const [widths, setWidths] = useState([]);
   const [height, setHeight] = useState([]);
   const ids = ["shapeHoler1", "container", "market"];
@@ -77,10 +78,26 @@ function Console() {
           </div>
         </div>
 
-        <img src="Rectangle 42123.png" alt="pic" className="l-top  d-none d-lg-block" />
-        <img src="Rectangle 42125.png" alt="pic" className="r-top d-none d-lg-block" />
-        <img src="Rectangle 42124.png" alt="pic" className="r-bottom d-none d-lg-block" />
-        <img src="Rectangle 42126.png" alt="pic" className="l-bottom d-none d-lg-block" />
+        <img
+          src="Rectangle 42123.png"
+          alt="pic"
+          className="l-top  d-none d-lg-block"
+        />
+        <img
+          src="Rectangle 42125.png"
+          alt="pic"
+          className="r-top d-none d-lg-block"
+        />
+        <img
+          src="Rectangle 42124.png"
+          alt="pic"
+          className="r-bottom d-none d-lg-block"
+        />
+        <img
+          src="Rectangle 42126.png"
+          alt="pic"
+          className="l-bottom d-none d-lg-block"
+        />
         <div
           id="market"
           className="line-market  d-none d-lg-block"
@@ -102,7 +119,7 @@ function Console() {
             <div className="custom-shape w-100">
               <LeftArrow />
               <div className="content justify-content-center d-flex">
-                <Toggle />
+                <Toggle onToggle={onToggle} isToggled={true} />
               </div>
               <RightArrow />
             </div>
@@ -128,5 +145,9 @@ function Console() {
     </div>
   );
 }
+
+Console.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default Console;

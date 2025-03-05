@@ -16,8 +16,7 @@
 
 .image-box2:nth-child(1) {
   animation-delay: 0s;
-}
-
+} 
 .image-box2:nth-child(2) {
   animation-delay: 1s;
 }
@@ -49,4 +48,34 @@
     transform: translateX(25%);
     opacity: 0;
   }
+}
+  
+@media only screen and (max-width: 2200px) {
+  .animation-container2{
+    width: 50%;
+  }
+}
+  
+@media only screen and (max-width: 1700px) {
+  .animation-container2{
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .animation-container2{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 576px) {
+  
 }

@@ -6,10 +6,7 @@ import Cnavas from "../compoments/Background";
 function Roadmap() {
   return (
     <div>
-      <Cnavas />
-      <PageNav />
       <Map />
-      <PageFooter />
     </div>
   );
 }

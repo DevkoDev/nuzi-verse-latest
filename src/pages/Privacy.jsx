@@ -6,8 +6,6 @@ import "./Privacy.css";
 function privacy() {
   return (
     <div>
-      <Canvas />
-      <PageNav />
       <div className="w-100 py-5">
         <div className="d-block text-justify w-100 container my-5 py-5">
           <h1 className="text-center w-100">NAKARMAZ Privacy Notice</h1>
@@ -137,7 +135,6 @@ function privacy() {
           </p>
         </div>
       </div>
-      <PageFooter />
     </div>
   );
 }

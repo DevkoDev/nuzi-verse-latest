@@ -1,21 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 
+import {useLocation } from "react-router-dom";
 function NavLine({ bottom = false }) {
   const svgRef = useRef(null);
   const [totalWidth, setTotalWidth] = useState(0);
-
+  const location = useLocation(); 
   useEffect(() => {
+    console.log("1::"+svgRef.current.clientWidth);
     function updateWidth() {
       if (svgRef.current) {
         setTotalWidth(svgRef.current.clientWidth);
+        console.log("2::"+svgRef.current.clientWidth);
       }
     }
     updateWidth();
     window.addEventListener("resize", updateWidth);
     window.addEventListener("load", updateWidth);
+ 
+  
+  }, [location,totalWidth]);
 
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
 
   let middleWidthPercentage = 0.25,
     heightPercentage = 0,
@@ -67,7 +71,13 @@ function NavLine({ bottom = false }) {
         transform: bottom == true ? "rotateX(180deg)" : "",
       }}
     >
-      <div style={{ position: "relative", width: "100%", height: `${totalWidth / heightPercentage}px` }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: `${totalWidth / heightPercentage}px`,
+        }}
+      >
         <div
           style={{
             position: "absolute",
@@ -76,11 +86,21 @@ function NavLine({ bottom = false }) {
             backdropFilter: "blur(2px)",
             WebkitBackdropFilter: "blur(2px)",
             backgroundColor: "#00000085",
-            clipPath: `polygon(0px 0px, ${straightWidth}px 0px, ${straightWidth + middleWidth / 4}px ${slantHeight - 1}px, ${straightWidth + middleWidth - middleWidth / 4}px ${slantHeight - 1}px, ${straightWidth + middleWidth}px 0px, ${totalWidth}px 0px)`,
+            clipPath: `polygon(0px 0px, ${straightWidth}px 0px, ${
+              straightWidth + middleWidth / 4
+            }px ${slantHeight - 1}px, ${
+              straightWidth + middleWidth - middleWidth / 4
+            }px ${slantHeight - 1}px, ${
+              straightWidth + middleWidth
+            }px 0px, ${totalWidth}px 0px)`,
           }}
         ></div>
 
-        <svg width="100%" height={totalWidth / heightPercentage} xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="100%"
+          height={totalWidth / heightPercentage}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path d={pathData} fill="none" stroke="#ffd363" strokeWidth="2" />
         </svg>
       </div>
