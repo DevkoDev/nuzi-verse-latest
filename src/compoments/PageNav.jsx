@@ -12,7 +12,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 
 
-function PageNav({ onToggle,onToggle2 }) {
+function PageNav({ onToggle, onToggle2 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const collapseRef = useRef(null);
   let collapseInstance = useRef(null);
@@ -53,7 +53,7 @@ function PageNav({ onToggle,onToggle2 }) {
   return (
     <div className="header-wrapper">
       <div className="logo-container d-none d-md-block">
-      <Link to="/"><img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" /></Link>
+        <Link to="/"><img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" /></Link>
       </div>
       <nav className="navbar py-md-4" style={{ backgroundColor: navBarBGC }}>
         <div className="container-lg d-none d-md-flex">
@@ -69,17 +69,17 @@ function PageNav({ onToggle,onToggle2 }) {
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={onToggle2} style={{ fontSize: fontSize1}}>
+              <Link to="/" onClick={onToggle2} style={{ fontSize: fontSize1 }}>
                 Play
               </Link>
             </li>
           </ul>
           <div className="right-section d-flex justify-content-between">
-            <Link to="/" onClick={onToggle} className="marketplace-link mx-2" style={{ fontSize: fontSize1}}>
+            <Link to="/" onClick={onToggle} className="marketplace-link mx-2" style={{ fontSize: fontSize1 }}>
               Marketplace
             </Link>
-            <ConnectWallet fontSize={fontSize1} />
-            </div>
+            <ConnectButton />
+          </div>
         </div>
 
         <div className="container-fluid d-flex d-md-none collapseContainer py-3 ">
@@ -119,7 +119,7 @@ function PageNav({ onToggle,onToggle2 }) {
                   </Link>
                 </li>
                 <li className="my-3 d-flex justify-content-center">
-                  {/* <ConnectButton /> */}
+                 
                   <NotchedBtn text="Connect Wallet" bgColor="rgba(255, 211, 99, 1)" fontSize="23px" color="rgba(30, 30, 30, 1)" />
                 </li>
               </ul>

@@ -1,6 +1,6 @@
 import "./NotchedBtn.css";
 import PropTypes from "prop-types";
-function NotchedBtn({ onClick ,text, bgColor, fontSize, color, padding, bgImage }) {
+function NotchedBtn({ onClick, text, bgColor, fontSize, color, padding, bgImage }) {
   return (
     <a className="notchedButtonL1">
       <div className="notchedButtonL2">
@@ -13,7 +13,7 @@ function NotchedBtn({ onClick ,text, bgColor, fontSize, color, padding, bgImage 
               fontSize: fontSize,
               color: color,
               backgroundImage: bgImage,
-              padding:padding
+              padding: padding
             }}
           >
             {text}
