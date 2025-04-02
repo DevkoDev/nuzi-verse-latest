@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./PageFooter.css";
-import Toggle from "./Toggle";
+import ToggleSwitch from "./Toggle";
 import NavLine from "./NavLine";
 
-function PageFooter() {
+const PageFooter = ({ onToggle }) => {
   return (
     <div className="footer-wrapper">
       <footer className="footer">
         <div className="d-flex lines-wrapper f-bottom d-none d-md-block">
           <NavLine bottom={true} />
         </div>
-        <div className="  d-flex pt-4 pb-2 justify-content-between d-none d-md-flex blur">
-          <div className="container">
-            <div className=" d-flex justify-content-center justify-content-lg-center align-items-center me-auto me-lg-0" style={{ minWidth: "35%" }}>
+        <div className="d-flex pt-4 pb-2 justify-content-between d-none d-md-flex blur">
+          <div className="container2 container">
+            <div className="d-flex justify-content-center justify-content-lg-center align-items-center me-auto me-lg-0" style={{ minWidth: "35%" }}>
               <ul className="footer-links justify-content-between justify-content-lg-between w-100">
                 <li>
                   <Link to="/privacy">Privacy</Link>
@@ -29,7 +30,7 @@ function PageFooter() {
             </div>
 
             <div className="toggle justify-content-center position-absolute" style={{ top: "-40%" }}>
-              <Toggle />
+              <ToggleSwitch onToggle={onToggle} />
             </div>
 
             <div className="right-section justify-content-center " style={{ minWidth: "35%" }}>
@@ -69,24 +70,7 @@ function PageFooter() {
             </ul>
           </div>
           <div className="d-flex justify-content-center my-3">
-            <Toggle />
-          </div>
-          <div className="right-section justify-content-center w-100" style={{ minWidth: "35%" }}>
-            <a href="https://x.com/NakarmaZ" className="image-hover" target="_blank">
-              <img src="/X.svg" />
-            </a>
-            <a href="https://discord.gg/2EsXf3kQ69" className="image-hover" target="_blank">
-              <img src="/discord.svg" />
-            </a>
-            <a href="https://www.youtube.com/@Nakarmaz" className="image-hover" target="_blank">
-              <img src="/Youtube.svg" />
-            </a>
-            <a href="https://www.tiktok.com/@nakarmaz_nuziverse" className="image-hover" target="_blank">
-              <img src="/tiktok.svg" />
-            </a>
-            <a href="https://www.facebook.com/NakarmaZ" className="image-hover" target="_blank">
-              <img src="/Group 7.svg" />
-            </a>
+            <ToggleSwitch onToggle={onToggle} />
           </div>
         </div>
       </footer>
@@ -98,6 +82,10 @@ function PageFooter() {
       </div>
     </div>
   );
-}
+};
+
+PageFooter.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default PageFooter;

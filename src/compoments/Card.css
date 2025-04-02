@@ -1,116 +1,184 @@
-/*.card{
-    border: 1px solid goldenrod;
-    width: fit-content;
-    clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
-    overflow: hidden;
-}*/
-.card h3 {
-  font-family: var(--azart-font);
-font-size: 24.6px;
-font-weight: 600;
-line-height: 18.26px;
-
-
+.productCard{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 307/365;
+  z-index: 5;
 }
-.one{
 
-height:350px;
-
-background-color:#ec971f;
-display:flex;
-justify-content: center;
-/* clip-path:polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%); */
+.svg{
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  z-index: -1;
 }
-.card {
-    color: #fff;
-    position: relative;
-    text-align: center;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
-    height:345px;
-   width:245px;
-   border-radius: 4px;
-background-color:#141413;
+
+.imageContainer{
+  aspect-ratio: 100/83;
+  width: 95%;
+  border-radius: 3px;
+}
+
+.image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.priceContainer{
+  width: 75%;
+}
+
+.buyBTN{
+  background-color: #f1a012;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.priceFont1{
+  font-size: 0.8rem;
+}
+
+.priceFont2{
+  font-size: 0.8rem;
+  color: #f1a012;
+  font-weight: 700;
+}
+
+.tags{
+  top: 0%;
+}
+
+.tag1{
+  display: flex;
+  border-radius: 50px;
+  height: 15%;
+  aspect-ratio: 1;
+  background-color: #f1a012;
+}
+
+.tag2{
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  height: 15%;
+  background-color: #f1a012;
+}
 
 
-align-self:center;
-clip-path: polygon(0 0, 100% 0%, 100% 76%, 67% 100%, 0 100%);
 
-  }
 
-  .card-badge {
-  
-    top: 70px;
-    left: 60px;
-    background-color: rgba(241, 160, 18, 1);
-    color: white;
-    border-radius: 10px;
-    font-size: 12px;
-    position: absolute;
-    font-family: var(--epilogue-font);
-    width: 70px;
-    padding: 5px;
-    text-align: center;
-    margin: auto;
-  }
-  .iconimg{
-    position: absolute;
-    top: 70px;
-    left: 25px;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(241, 160, 18, 1);
-    border-radius: 50%;
-  }
-  .card-image {
-    padding: 15px;
-    width: 245px;
-    height: 219px;
-    object-fit: cover;
-    position: relative;
-    border-radius: 4px;
-  }
-  
-  .card-title {
-    margin: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .buyBTN{
+    width: 30%;
+    font-size: 0.5rem;
   }
 
-  .card-price,
-  .card-amount {
-    margin: 5px 0;
-    font-size: 10px;
+  .itemfont{
+    font-size: 1rem;
   }
-  .card-amount{
-    color: rgba(241, 160, 18, 1);
+
+  .priceFont1{
+    font-size: 0.5rem;
   }
-  .card-button {
-    margin-top: 10px;
-    background-color: rgba(241, 160, 18, 1);
-    border: none;
-font-weight:500 ;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    padding: 5px 25px;
-    font-family: var(--inter-font);
-    font-size: 13px;
+
+  .priceFont2{
+    font-size: 0.4rem;
   }
-  .fire{
-    margin: 0 5px ;
+
+  .coinIMG{
+    width: 12px;
   }
-  .card-button:hover {
-    background-color: #ec971f;
+}
+
+@media only screen and (min-width: 992px) {
+  .buyBTN{
+    width: 30%;
+    font-size: 0.7rem;
   }
-  .card-text img{
-width: 35px;
-height:  35px;
-padding: 5px;
-margin-left: 5px;
+
+  .itemfont{
+    font-size: 1.3rem;
+    margin-bottom: 0px !important;
   }
-  .card-text{
-    display: flex;
-    gap: 20px;
-    
+
+  .priceFont1{
+    font-size: 0.7rem;
   }
+
+  .priceFont2{
+    font-size: 0.6rem;
+  }
+
+  .coinIMG{
+    width: 14px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .buyBTN{
+    width: 30%;
+    font-size: 1.1rem;
+  }
+
+  .itemfont{
+    font-size: 1.3rem;
+    margin-bottom: 0px !important;
+  }
+
+  .priceFont1{
+    font-size: 1.1rem;
+  }
+
+  .priceFont2{
+    font-size: 1rem;
+  }
+
+  .coinIMG{
+    width: 20px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .buyBTN{
+    width: 30%;
+    font-size: 1.1rem;
+  }
+
+  .itemfont{
+    font-size: 1.6rem;
+  }
+
+  .priceFont1{
+    font-size: 1.1rem;
+  }
+
+  .priceFont2{
+    font-size: 1rem;
+  }
+
+  .coinIMG{
+    width: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #3f3f3f; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

@@ -1,4 +1,4 @@
-.price-range-container {
+/* .price-range-container {
     padding: 20px 0;
     color: #fff;
     background-color: #000;
@@ -43,9 +43,9 @@
     outline: none;
       background: linear-gradient(
     to right,
-    var(--primary-color) 0%, /* البداية باللون البرتقالي */
-   var(--primary-color) var(--value, 50%), /* الجزء البرتقالي */
-    #ccc var(--value, 50%) /* الجزء الرمادي */
+    var(--primary-color) 0%, 
+   var(--primary-color) var(--value, 50%), 
+    #ccc var(--value, 50%) 
   );
     transition: background 0.3s;
     top: -10px;
@@ -89,4 +89,4 @@
     color: #fff;
   }
   
- 
+  */

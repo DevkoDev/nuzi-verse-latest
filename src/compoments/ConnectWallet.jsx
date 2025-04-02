@@ -1,6 +1,6 @@
 import "./NotchedBtn.css";
 import PropTypes from "prop-types";
-function NotchedBtn({ onClick ,text, bgColor, fontSize, color, padding, bgImage }) {
+function ConnectWalletBTN({ onClick , fontSize }) {
   return (
     <a className="notchedButtonL1">
       <div className="notchedButtonL2">
@@ -9,14 +9,12 @@ function NotchedBtn({ onClick ,text, bgColor, fontSize, color, padding, bgImage 
             className="notchedButtonL4"
             onClick={onClick}
             style={{
-              backgroundColor: bgColor,
+              backgroundColor: "rgba(255, 211, 99, 1)",
               fontSize: fontSize,
-              color: color,
-              backgroundImage: bgImage,
-              padding:padding
+              color: "rgba(30, 30, 30, 1)",
             }}
           >
-            {text}
+            Connect Wallet
           </div>
         </div>
       </div>
@@ -26,14 +24,9 @@ function NotchedBtn({ onClick ,text, bgColor, fontSize, color, padding, bgImage 
 
 
 
-NotchedBtn.propTypes = {
+ConnectWalletBTN.propTypes = {
   onClick: PropTypes.func.isRequired,
-  text: PropTypes.func.isRequired,
-  bgColor: PropTypes.func.isRequired,
   fontSize: PropTypes.func.isRequired,
-  color: PropTypes.func.isRequired,
-  padding: PropTypes.func.isRequired,
-  bgImage: PropTypes.func.isRequired,
 };
 
-export default NotchedBtn;
+export default ConnectWalletBTN;

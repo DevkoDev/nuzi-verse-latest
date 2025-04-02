@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
+import PropTypes from "prop-types";
 import "./PageNav.css";
 import NotchedBtn from "./NotchedBtn";
+import ConnectWallet from "./ConnectWallet";
 import NavLine from "./NavLine";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { useState, useEffect, useRef } from "react";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-function PageNav() {
+
+
+
+function PageNav({ onToggle,onToggle2 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const collapseRef = useRef(null);
   let collapseInstance = useRef(null);
@@ -41,10 +46,14 @@ function PageNav() {
   let fontSize1 = windowWidth < 789 ? "13px" : "16px";
   let navBarBGC = windowWidth < 768 ? "#00000085 !important" : "rgba(0, 0, 0, 0)";
 
+
+
+
+
   return (
     <div className="header-wrapper">
       <div className="logo-container d-none d-md-block">
-        <Logo />
+      <Link to="/"><img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" /></Link>
       </div>
       <nav className="navbar py-md-4" style={{ backgroundColor: navBarBGC }}>
         <div className="container-lg d-none d-md-flex">
@@ -60,21 +69,21 @@ function PageNav() {
               </Link>
             </li>
             <li>
-              <Link to="/play" style={{ fontSize: fontSize1, color: "gray", pointerEvents: "none" }}>
+              <Link to="/" onClick={onToggle2} style={{ fontSize: fontSize1}}>
                 Play
               </Link>
             </li>
           </ul>
           <div className="right-section d-flex justify-content-between">
-            <Link to="/marketplace" className="marketplace-link mx-2" style={{ fontSize: fontSize1, color: "gray", pointerEvents: "none" }}>
+            <Link to="/" onClick={onToggle} className="marketplace-link mx-2" style={{ fontSize: fontSize1}}>
               Marketplace
             </Link>
-            <NotchedBtn text="Connect Wallet" bgColor="rgba(255, 211, 99, 1)" fontSize={fontSize1} color="rgba(30, 30, 30, 1)" />
-          </div>
+            <ConnectWallet fontSize={fontSize1} />
+            </div>
         </div>
 
         <div className="container-fluid d-flex d-md-none collapseContainer py-3 ">
-          <button className={`btn collapseBtn ${(isOpened)?"opened":""}`} type="button" onClick={toggleCollapse} aria-expanded="false" aria-controls="menu">
+          <button className={`btn collapseBtn ${isOpened ? "opened" : ""}`} type="button" onClick={toggleCollapse} aria-expanded="false" aria-controls="menu">
             <svg width="100%" height="100%" viewBox="0 0 100 100">
               <path className="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
               <path className="line line2" d="M 20,50 H 80" />
@@ -82,9 +91,9 @@ function PageNav() {
             </svg>
           </button>
           <div className="mobileLogo">
-            <a href="/">
+            <Link to="/">
               <img className="w-100" src="\NUZ_logo_3Dcoin-bland_180.gif" alt=" logo" />
-            </a>
+            </Link>
           </div>
           <div className="collapse w-100 p-0 m-0" id="menu" ref={collapseRef}>
             <div className="">
@@ -110,6 +119,7 @@ function PageNav() {
                   </Link>
                 </li>
                 <li className="my-3 d-flex justify-content-center">
+                  {/* <ConnectButton /> */}
                   <NotchedBtn text="Connect Wallet" bgColor="rgba(255, 211, 99, 1)" fontSize="23px" color="rgba(30, 30, 30, 1)" />
                 </li>
               </ul>
@@ -124,5 +134,13 @@ function PageNav() {
     </div>
   );
 }
+
+
+
+PageNav.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+  onToggle2: PropTypes.func.isRequired,
+};
+
 
 export default PageNav;

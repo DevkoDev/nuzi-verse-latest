@@ -45,7 +45,7 @@ function Months() {
         <div className="roadMapDivContainerL">
           <div id="div1" className="roadMapDiv1L w-100">
             <div className="roadMapDiv2 p-3">
-              <h5 className="text-center">STEP 1</h5>
+              <h5 className="text-center">Q1 2025</h5>
               <h3>The awakening</h3>
               <p>- release of our 1st INTERACTIVE MANGA IP series called “LEGACY4”</p>
               <p>- exclusive entrance to our ecosystem</p>
@@ -57,7 +57,7 @@ function Months() {
         <div className="roadMapDivContainerR" style={{ top: `${positions[1]}px` }}>
           <div id="div2" className="roadMapDiv1R w-100">
             <div className="roadMapDiv2 p-3">
-              <h5 className="text-center">STEP 2</h5>
+              <h5 className="text-center">Q2 2025</h5>
               <h3>The welcoming </h3>
               <p>- A new IP produced and released under the PHYGITAL COLLECTION DEALZ flagship</p>
               <p>- An inclusive PFP collection release empowered by the $NUZ</p>
@@ -69,7 +69,7 @@ function Months() {
         <div className="roadMapDivContainerL" style={{ top: `${positions[2]}px` }}>
           <div id="div3" className="roadMapDiv1L w-100">
             <div className="roadMapDiv2 p-3">
-              <h5 className="text-center">STEP 3</h5>
+              <h5 className="text-center">Q3 2025</h5>
               <h3>The expanding</h3>
               <p>- development of gamified features to enhance current IPz</p>
               <p>- more INTERACT & EARN quests and tools prior to the $NUZ TGE</p>
@@ -81,7 +81,7 @@ function Months() {
         <div className="roadMapDivContainerR" style={{ top: `${positions[3]}px` }}>
           <div id="div4" className="roadMapDiv1R w-100">
             <div className="roadMapDiv2 p-3">
-              <h5 className="text-center">STEP 4</h5>
+              <h5 className="text-center">Q4 2025</h5>
               <h3>The strengthening</h3>
               <p>- release of our exclusive MEMBERSHIP collection</p>
               <p>- aggregation of 3rd-parties perks, discounts and rewards</p>

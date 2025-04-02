@@ -1,21 +1,30 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 function NavLine({ bottom = false }) {
   const svgRef = useRef(null);
   const [totalWidth, setTotalWidth] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     function updateWidth() {
       if (svgRef.current) {
         setTotalWidth(svgRef.current.clientWidth);
       }
-    }
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    window.addEventListener("load", updateWidth);
+    };
 
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+    // Use ResizeObserver to detect width changes, even when scrollbar appears
+    const observer = new ResizeObserver(updateWidth);
+    if (svgRef.current) {
+      observer.observe(svgRef.current);
+    }
+
+    // Initial update
+    updateWidth();
+
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, [location]);
 
   let middleWidthPercentage = 0.25,
     heightPercentage = 0,
@@ -48,26 +57,31 @@ function NavLine({ bottom = false }) {
   const middleWidth = totalWidth * middleWidthPercentage;
   const slantHeight = totalWidth / heightPercentage;
 
-  const pathData = `
-      M 1 ${slantHeight - 1}
+  const pathData = `M 1 ${slantHeight - 1}
       L ${endCurve} 1
       L ${straightWidth} 1
       L ${straightWidth + middleWidth / 4} ${slantHeight - 1}
       L ${straightWidth + middleWidth - middleWidth / 4} ${slantHeight - 1}
       L ${straightWidth + middleWidth} 1
       L ${totalWidth - endCurve} 1
-      L ${totalWidth} ${slantHeight - 1}
-    `;
+      L ${totalWidth} ${slantHeight - 1}`;
+
   return (
     <div
       ref={svgRef}
       style={{
         width: "100%",
-        WebkitTransform: bottom == true ? "rotateX(180deg)" : "",
-        transform: bottom == true ? "rotateX(180deg)" : "",
+        WebkitTransform: bottom ? "rotateX(180deg)" : "",
+        transform: bottom ? "rotateX(180deg)" : "",
       }}
     >
-      <div style={{ position: "relative", width: "100%", height: `${totalWidth / heightPercentage}px` }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: `${totalWidth / heightPercentage}px`,
+        }}
+      >
         <div
           style={{
             position: "absolute",

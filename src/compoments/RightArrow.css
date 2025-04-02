@@ -20,7 +20,7 @@
   .image-box:nth-child(1) {
     animation-delay: 0s;
   }
-  
+ 
   .image-box:nth-child(2) {
     animation-delay: 1s;
   }
@@ -54,3 +54,32 @@
     }
   }
   
+  @media only screen and (max-width: 2200px) {
+    .animation-container{
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 1700px) {
+    .animation-container{
+      width: 55%;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .animation-container{
+      width: 60%;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    
+  }
+  
+  @media only screen and (max-width: 768px) {
+    
+  }
+  
+  @media only screen and (max-width: 576px) {
+    
+  }
