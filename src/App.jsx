@@ -10,6 +10,7 @@ import Canvas from "./compoments/Background";
 import PageNav from "./compoments/PageNav";
 import PageFooter from "./compoments/PageFooter";
 import Tablet from "./compoments/Tablet";
+import { Web3Provider } from "./components/Web3Provider";
 import "./compoments/Tablet.css";
 import "./index.css";
 
@@ -32,38 +33,40 @@ function App() {
   };
 
   return (
-    <div>
-      <BrowserRouter>
-        <Canvas />
-        {!toggled? (
-          <div>
-            <PageFooter onToggle={consoleBTNFun} />
-            <PageNav onToggle={marketPlaceToggleFun} onToggle2={consoleBTNFun} />
-            <Routes>
-              <Route
-                path="/"
-                element={<HomePage toggled={toggled} fun={toggleFun} />}
-              />
-              <Route path="privacy" element={<Privacy />} />
-              <Route path="roadmap" element={<Roadmap />} />
-            </Routes>
-          </div>
-        ) : (
-          <div className="w-100 p-3" style={{ height: "100vh" }}>
-            <div className="wrap">
-              <span className="cam"></span>
-              <div id="ToggleON" className="position-relative h-100">
-                      <div className=" position-absolute w-100 h-100">
-                        <div className="tablet position-relative" style={{ height: "100%" }}>
-                            <Tablet onToggle={toggleFun} onToggle2={marketPlaceToggleFun} market={marketPlaceToggled} />
-                        </div>
-                      </div>
-                    </div>
+    <Web3Provider>
+      <div>
+        <BrowserRouter>
+          <Canvas />
+          {!toggled? (
+            <div>
+              <PageFooter onToggle={consoleBTNFun} />
+              <PageNav onToggle={marketPlaceToggleFun} onToggle2={consoleBTNFun} />
+              <Routes>
+                <Route
+                  path="/"
+                  element={<HomePage toggled={toggled} fun={toggleFun} />}
+                />
+                <Route path="privacy" element={<Privacy />} />
+                <Route path="roadmap" element={<Roadmap />} />
+              </Routes>
             </div>
-          </div>
-        )}
-      </BrowserRouter>
-    </div>
+          ) : (
+            <div className="w-100 p-3" style={{ height: "100vh" }}>
+              <div className="wrap">
+                <span className="cam"></span>
+                <div id="ToggleON" className="position-relative h-100">
+                  <div className=" position-absolute w-100 h-100">
+                    <div className="tablet position-relative" style={{ height: "100%" }}>
+                      <Tablet onToggle={toggleFun} onToggle2={marketPlaceToggleFun} market={marketPlaceToggled} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </BrowserRouter>
+      </div>
+    </Web3Provider>
   );
 }
 

@@ -179,6 +179,7 @@ function PageNav({ onToggle, onToggle2 }) {
                   </Link>
                 </li>
                 <li className="my-3 d-flex justify-content-center">
+                  <ConnectWallet />
                 </li>
               </ul>
             </div>

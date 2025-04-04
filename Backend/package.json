@@ -1,6 +1,13 @@
 {
+  "name": "nuzi-verse-backend",
+  "version": "1.0.0",
   "dependencies": {
     "express": "^5.1.0",
-    "mongoose": "^8.13.2"
+    "mongoose": "^8.13.2",
+    "siwe": "^2.1.4",
+    "express-session": "^1.17.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.7.0"
   }
 }
