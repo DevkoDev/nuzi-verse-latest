@@ -12,7 +12,7 @@ const ToggleSwitch = ({ onToggle ,isToggled}) => {
   };
 
   return (
-    <div className={`toggle-outer p-1 d-none d-md-block rounded-pill ${isToggled ? "active" : ""}`}>
+    <div className={`toggle-outer p-1 d-block rounded-pill ${isToggled ? "active" : ""}`}>
       <div
         className={`toggle-container p-1 rounded-pill ${isToggled ? "active" : ""}`}
         onClick={handleToggle}

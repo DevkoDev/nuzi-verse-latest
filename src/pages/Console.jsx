@@ -7,8 +7,9 @@ import LeftArrow from "../compoments/LeftArrow";
 import RightArrow from "../compoments/RightArrow";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-function Console({ onToggle, market }) {
+function Console({ onToggle, market, onToggle2 }) {
   const [widths, setWidths] = useState([]);
   const [height, setHeight] = useState([]);
   const ids = ["shapeHoler1", "container", "market"];
@@ -55,7 +56,10 @@ function Console({ onToggle, market }) {
       <div
         id="container"
         className="position-relative my-2"
-        style={{ height: "97%", backgroundColor: `${market? ("#08090ac9") : ("")} ` }}
+        style={{
+          height: "97%",
+          backgroundColor: `${market ? "#08090ac9" : ""} `,
+        }}
       >
         <div className="row">
           <div
@@ -100,9 +104,17 @@ function Console({ onToggle, market }) {
         <div
           id="market"
           className="line-market  d-none d-lg-block"
-          style={{ left: marketPosInPx }}
+          onClick={onToggle2}
+          style={{
+            left: marketPosInPx,
+            cursor: "pointer",
+            zIndex: 99999999999999,
+          }}
         >
           MARKET PLACE
+        </div>
+        <div className="connectBTN">
+        <ConnectButton />
         </div>
         <svg id="SVG" className="w-100 h-100 d-none d-lg-block">
           <path
@@ -157,6 +169,7 @@ function Console({ onToggle, market }) {
 
 Console.propTypes = {
   onToggle: PropTypes.func.isRequired,
+  onToggle2: PropTypes.func.isRequired,
   market: PropTypes.func.isRequired,
 };
 

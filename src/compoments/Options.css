@@ -156,3 +156,10 @@ span {
   left: 0%;
   position: absolute;
 }
+
+.connectBTN{
+  z-index: 999999999;
+  position: absolute;
+  left: 82%;
+  transform: translate(-50%,-50%);
+}

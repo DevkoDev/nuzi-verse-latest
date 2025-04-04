@@ -55,7 +55,7 @@ function App() {
               <div id="ToggleON" className="position-relative h-100">
                       <div className=" position-absolute w-100 h-100">
                         <div className="tablet position-relative" style={{ height: "100%" }}>
-                            <Tablet onToggle={toggleFun} market={marketPlaceToggled} />
+                            <Tablet onToggle={toggleFun} onToggle2={marketPlaceToggleFun} market={marketPlaceToggled} />
                         </div>
                       </div>
                     </div>
