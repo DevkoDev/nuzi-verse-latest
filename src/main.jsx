@@ -39,7 +39,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider initialChain={mainnet}>
+        <RainbowKitProvider modalSize="compact" initialChain={polygon}>
           <App />
         </RainbowKitProvider>
       </QueryClientProvider>
