@@ -1,6 +1,6 @@
-import PageFooter from "../compoments/PageFooter";
-import PageNav from "../compoments/PageNav";
-import Canvas from "../compoments/Background";
+import PageFooter from "../components/PageFooter";
+import PageNav from "../components/PageNav";
+import Canvas from "../components/Background";
 import "./Privacy.css";
 
 function privacy() {

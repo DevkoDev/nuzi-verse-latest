@@ -1,6 +1,6 @@
-import PageNav from "../compoments/PageNav"
-import PageFooter from "../compoments/PageFooter"
-import RoadHeader from "../compoments/RoadHeader"
+import PageNav from "../components/PageNav"
+import PageFooter from "../components/PageFooter"
+import RoadHeader from "../components/RoadHeader"
 import "./MarketPlace.css"
 
 

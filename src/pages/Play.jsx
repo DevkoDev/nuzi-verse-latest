@@ -1,7 +1,7 @@
-import Tablet from "../compoments/Tablet";
-import "../compoments/Tablet.css";
+import Tablet from "../components/Tablet";
+import "../components/Tablet.css";
 import "./Play.css";
-import Canvas from "../compoments/Background";
+import Canvas from "../components/Background";
 
 function Play() {
   return (

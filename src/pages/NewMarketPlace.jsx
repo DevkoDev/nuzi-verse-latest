@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import Card from "../compoments/Card";
+import Card from "../components/Card";
 import "./NewMarketPlace.css";
-import ToggleSwitch from "../compoments/Toggle";
+import ToggleSwitch from "../components/Toggle";
 import PropTypes from "prop-types";
 
 function NewMarketPlace({ onToggle }) {

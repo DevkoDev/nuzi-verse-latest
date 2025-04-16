@@ -1,4 +1,4 @@
-import Map from "../compoments/Map";
+import Map from "../components/Map";
 
 
 function Roadmap() {

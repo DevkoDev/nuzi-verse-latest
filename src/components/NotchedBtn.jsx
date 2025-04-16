@@ -25,7 +25,6 @@ function NotchedBtn({ onClick, text, bgColor, fontSize, color, padding, bgImage 
 }
 
 
-
 NotchedBtn.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.func.isRequired,

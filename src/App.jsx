@@ -6,12 +6,12 @@ import NewMarketPlace from "./pages/NewMarketPlace";
 import Privacy from "./pages/Privacy";
 import Roadmap from "./pages/Roadmap";
 import HomePage from "./pages/HomePage";
-import Canvas from "./compoments/Background";
-import PageNav from "./compoments/PageNav";
-import PageFooter from "./compoments/PageFooter";
-import Tablet from "./compoments/Tablet";
+import Canvas from "./components/Background";
+import PageNav from "./components/PageNav";
+import PageFooter from "./components/PageFooter";
+import Tablet from "./components/Tablet";
 import { Web3Provider } from "./components/Web3Provider";
-import "./compoments/Tablet.css";
+import "./components/Tablet.css";
 import "./index.css";
 
 function App() {

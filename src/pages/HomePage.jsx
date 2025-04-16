@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Text from "../compoments/Text";
-import HomeButtons from "../compoments/HomeButtons";
-import NotchedBtn from "../compoments/NotchedBtn";
-import "../compoments/Tablet.css";
+import Text from "../components/Text";
+import HomeButtons from "../components/HomeButtons";
+import NotchedBtn from "../components/NotchedBtn";
+import "../components/Tablet.css";
 import "./HomePage.css";
 import { ToastContainer, toast } from "react-toastify";
 function HomePage() {

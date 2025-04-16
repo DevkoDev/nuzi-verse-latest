@@ -1,10 +1,10 @@
-import Circles from "../compoments/Circles";
-import Options from "../compoments/Options";
-import Square from "../compoments/Square";
-import Toggle from "../compoments/Toggle";
+import Circles from "../components/Circles";
+import Options from "../components/Options";
+import Square from "../components/Square";
+import Toggle from "../components/Toggle";
 import NewMarketPlace from "./NewMarketPlace";
-import LeftArrow from "../compoments/LeftArrow";
-import RightArrow from "../compoments/RightArrow";
+import LeftArrow from "../components/LeftArrow";
+import RightArrow from "../components/RightArrow";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
